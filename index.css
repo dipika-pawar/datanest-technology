@@ -1,0 +1,1259 @@
+:root {
+  --primary-purple: #8b33a5;
+  --dark-purple: #5d0e6d;
+  --text-dark: #2d2e32;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Navbar Container */
+/* Adjusting Navbar Height to accommodate larger logo */
+.navbar {
+  background-color: var(--white);
+  height: 100px; /* Increased from 80px to fit the larger logo */
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #f8f8f8;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.logo-wrapper:hover {
+  transform: scale(1.09); /* Subtle pop on hover */
+}
+.logo-img {
+  height: 120px; /* Increased from 40px for prominence */
+  width: auto;
+  object-fit: contain;
+}
+
+.company-name {
+  font-weight: 800;
+  font-size: 1.5rem; /* Increased from 1.2rem */
+  color: var(--text-dark);
+  letter-spacing: -1px;
+  line-height: 1;
+  text-transform: uppercase; /* Makes the brand feel more established */
+}
+
+.company-name .accent {
+  color: var(--primary-purple);
+  display: block; /* Moves 'TECHNOLOGY' to a second line for a stacked, bold look */
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-top: 4px;
+}
+
+/* Desktop Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-purple);
+}
+
+/* Quote Button */
+.btn-quote {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-quote:hover {
+  background-color: var(--dark-purple);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-dark);
+  transition: var(--transition);
+}
+
+/* Mobile Responsive Logic */
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px 0;
+    gap: 25px;
+  }
+  .company-name {
+    margin-left: -12px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* ======================
+Hero Section
+====================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Poppins:wght@400;800&display=swap');
+
+:root {
+    --navy: #0D233E;
+    --purple: #92278F;
+    --pink-accent: #D81B60;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.dn-hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--navy);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dn-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.dn-content {
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.dn-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, var(--purple), var(--pink-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.dn-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.dn-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary {
+    padding: 15px 35px;
+    background: linear-gradient(45deg, var(--purple), var(--pink-accent));
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(146, 39, 143, 0.3);
+}
+
+.btn-secondary {
+    padding: 15px 35px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(146, 39, 143, 0.5); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dn-title { font-size: 2.5rem; }
+    .dn-subtitle { font-size: 0.9rem; letter-spacing: 2px; }
+    .dn-btns { flex-direction: column; align-items: center; }
+}
+
+/* ======================
+Hero Section
+====================== */
+
+/* =======================
+About Section
+======================= */
+
+/* Datanest Brand Specific Styling */
+.datanest-about-section {
+    padding: 50px 6%;
+    background-color: #050b1a; /* लोगोमधील गडद निळा (Dark Navy) */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.dn-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Left Side: 3D Image Styling */
+.dn-left-content {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    perspective: 1500px;
+}
+
+.dn-image-card {
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    transform-style: preserve-3d;
+    animation: dn-float 5s ease-in-out infinite;
+}
+
+.dn-img-wrapper {
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: rotateY(15deg) rotateX(5deg);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.dn-img-wrapper img {
+    width: 100%;
+    display: block;
+    filter: brightness(0.9);
+}
+
+.dn-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.2), transparent);
+}
+
+.dn-back-box {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #9c27b0, #6a1b9a); /* लोगोमधील पर्पल/मजेंटा */
+    border-radius: 20px;
+    z-index: 1;
+    transform: rotateY(15deg) rotateX(5deg) translateZ(-30px);
+    opacity: 0.3;
+}
+
+/* Right Side: Content Styling */
+.dn-right-content {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.subheading {
+    color: #c154ff; /* लोगोमधील फिकट जांभळा */
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ffffff, #9c27b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.dn-primary-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: linear-gradient(45deg, #9c27b0, #6a1b9a);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.3);
+}
+
+.dn-primary-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(156, 39, 176, 0.5);
+    background: linear-gradient(45deg, #6a1b9a, #9c27b0);
+}
+
+/* 3D Reveal Animations */
+.dn-reveal {
+    opacity: 0;
+    transform: translateY(30px) rotateX(-45deg);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dn-reveal.active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+@keyframes dn-float {
+    0%, 100% { transform: translateY(0) rotateY(15deg); }
+    50% { transform: translateY(-20px) rotateY(18deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .dn-container { flex-direction: column; text-align: center; gap: 80px; }
+    .heading { font-size: 2.2rem; }
+    .dn-description .dn-reveal{margin-right:37px;}
+    .dn-left-content { width: 100%; order: 1; }
+    .dn-right-content { order: 2; }
+    .dn-img-wrapper { transform: none; }
+    .dn-back-box { transform: translateZ(-20px); }
+    @keyframes dn-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+}
+
+/* =======================
+About Section
+======================= */
+
+/* =======================
+Services Section
+======================= */
+
+/* Datanest Services Specific Style */
+.dn-services-section {
+    padding: 50px 5%;
+    background-color: #050b1a; /* Dark Navy Background */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.dn-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dn-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dn-section-header h4 {
+    color: #9c27b0; /* Logo Purple */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.dn-section-header h2 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #fff, #c154ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 3D Tilt Grid Setup */
+.dn-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    perspective: 1000px;
+}
+
+/* Glassmorphism Card Style */
+.dn-service-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-content {
+    transform: translateZ(50px); /* 3D Depth Effect */
+}
+
+.icon-box {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #9c27b0; /* Brand Purple */
+    transition: 0.3s;
+}
+
+.dn-service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.dn-service-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Neon Glow Effect on Hover */
+.card-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(156, 39, 176, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dn-service-card:hover .card-glow {
+    opacity: 1;
+}
+
+.dn-service-card:hover {
+    border-color: rgba(156, 39, 176, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive View */
+@media (max-width: 768px) {
+    .dn-section-header h2 { font-size: 2.2rem; }
+    .dn-services-grid { grid-template-columns: 1fr; }
+}
+
+/* ========================
+Services Section
+======================== */
+
+/* ========================
+Why Choose Us
+======================== */
+
+/* Datanest Why Choose Us - Exclusive Style */
+.dn-why-choose-us {
+    padding: 50px 5%;
+    background-color: #050b1a; /* Logo Dark Navy */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.dn-wcu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dn-wcu-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.dn-wcu-header h4 {
+    color: #9c27b0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.dn-wcu-header h2 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ffffff, #c154ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Timeline Layout */
+.dn-timeline-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.dn-vertical-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #9c27b0, #6a1b9a, transparent);
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.5);
+}
+
+.dn-step-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* JS will change this */
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dn-step-item.left {
+    left: 0;
+    justify-content: flex-end;
+    transform: translateX(-100px) rotateY(-30deg);
+}
+
+.dn-step-item.right {
+    left: 50%;
+    justify-content: flex-start;
+    transform: translateX(100px) rotateY(30deg);
+}
+
+/* Reveal State */
+.dn-step-item.active {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+}
+
+/* Icon Styling with 3D Rotation */
+.dn-step-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #9c27b0, #050b1a);
+    border: 2px solid #c154ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.6);
+}
+
+.left .dn-step-icon { right: -30px; }
+.right .dn-step-icon { left: -30px; }
+
+.dn-step-item.active .dn-step-icon {
+    animation: icon-3d-spin 1.5s ease-out forwards;
+}
+
+/* Glass Card Styling */
+.dn-step-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    width: 80%;
+    transition: 0.4s;
+}
+
+.dn-step-card:hover {
+    background: rgba(156, 39, 176, 0.1);
+    border-color: #9c27b0;
+    transform: translateY(-5px);
+}
+
+.dn-step-card h3 {
+    margin-bottom: 10px;
+    color: #c154ff;
+}
+
+.dn-step-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes icon-3d-spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Responsive View */
+@media (max-width: 768px) {
+    .dn-vertical-line { left: 30px; }
+    .dn-step-item { width: 100%; left: 0 !important; padding-left: 70px; padding-right: 0; justify-content: flex-start !important; }
+    .dn-step-item.left { transform: translateX(50px); }
+    .dn-step-item.right { transform: translateX(50px); }
+    .dn-step-icon { left: 0 !important; }
+    .dn-step-card { width: 80%; }
+    .dn-wcu-header h2 { font-size: 2.2rem; }
+}
+
+/* ========================
+Why Choose Us
+======================== */
+
+/* ======================
+tech-stack
+====================== */
+
+/* Datanest Tech Stack Exclusive Style */
+.dn-tech-section {
+    padding: 40px 5%;
+    background-color: #050b1a; /* Logo Dark Navy */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.dn-tech-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left Content Styling */
+.dn-tech-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.dn-tech-content h4 {
+    color: #9c27b0; /* Logo Purple */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.dn-tech-content h2 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    background: linear-gradient(90deg, #ffffff, #c154ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+}
+
+.dn-tech-content p {
+    color: #b0b8c1;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.dn-tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dn-tech-list span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #c154ff;
+}
+
+/* 3D Sphere Styling */
+.dn-tech-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    min-height: 450px;
+    position: relative;
+}
+
+.dn-sphere-wrapper {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #9c27b0; /* Base color for tags */
+}
+
+/* Individual Tag Styling inside Sphere */
+.tagcloud--item {
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+    background: linear-gradient(45deg, #fff, #9c27b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagcloud--item:hover {
+    -webkit-text-fill-color: #ffffff;
+    text-shadow: 0 0 15px rgba(156, 39, 176, 0.8);
+}
+
+/* Decorative Background Glow */
+.dn-tech-visual::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(156, 39, 176, 0.2) 0%, transparent 70%);
+    z-index: 0;
+}
+
+/* Responsive View */
+@media (max-width: 992px) {
+    .dn-tech-container { flex-direction: column; text-align: center; }
+    .dn-tech-content { display: flex; flex-direction: column; align-items: center; }
+    .dn-tech-list { align-items: flex-start; margin-bottom: 40px; }
+    .dn-tech-visual { min-height: 350px; }
+}
+
+/* ======================
+tech-stack
+====================== */
+
+/* =======================
+testimonials
+======================= */
+
+/* Datanest Testimonials - Glassy Bubbles Style */
+.dn-testimonials-section {
+    padding: 20px 5%;
+    background-color: #050b1a; /* Logo Dark Navy */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dn-testi-header {
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.dn-testi-header h2 {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #ffffff, #c154ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dn-testi-header h4 {
+    color: #9c27b0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Bubbles Layout */
+.dn-bubbles-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Bubble Styling */
+.dn-testi-bubble {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(156, 39, 176, 0.2);
+}
+
+.bubble-inner {
+    width: 100%;
+    padding: 10px;
+}
+
+.dn-testi-bubble img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #9c27b0;
+    margin-bottom: 10px;
+}
+
+.dn-testi-bubble h3 {
+    font-size: 1.1rem;
+    color: #c154ff;
+    margin-bottom: 5px;
+}
+
+.dn-testi-bubble p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/* Bubble Sizes & Animations */
+.bubble-large { width: 280px; height: 280px; animation: float 8s infinite ease-in-out; }
+.bubble-medium { width: 240px; height: 240px; animation: float 10s infinite ease-in-out -2s; }
+.bubble-small { width: 220px; height: 220px; animation: float 7s infinite ease-in-out -4s; }
+
+/* Hover Effect */
+.dn-testi-bubble:hover {
+    transform: scale(1.1) translateY(-10px);
+    background: rgba(156, 39, 176, 0.15);
+    border-color: #9c27b0;
+    border-radius: 20px; /* Bubble becomes a card on hover */
+    z-index: 100;
+    animation-play-state: paused;
+}
+
+.dn-testi-bubble:hover p {
+    opacity: 1;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-30px) translateX(15px); }
+    66% { transform: translateY(20px) translateX(-15px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dn-bubbles-container { height: auto; gap: 30px; }
+    .dn-testi-bubble { position: relative !important; width: 90% !important; height: auto !important; border-radius: 20px; animation: none; margin: 0 auto; }
+    .bubble-inner { padding: 20px; }
+    .dn-testi-header h2 { font-size: 2rem; }
+}
+
+/* =======================
+testimonials
+======================= */
+
+/*==========================
+ FOOTER 
+ ===========================*/
+
+/* 1. Global Variables & Root */
+:root {
+  --dt-bg: #0a192f;        /* Deep Navy Background */
+  --dt-accent: #9d34da;    /* Vibrant Purple */
+  --dt-text-main: #ffffff; /* Pure White */
+  --dt-text-dim: #a8b2d1;  /* Soft Blue-Gray */
+  --dt-input-bg: #112240;  /* Lighter Navy for inputs */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. Base Styles */
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.dt-main-footer {
+  background-color: var(--dt-bg);
+  color: var(--dt-text-main);
+  padding: 80px 5% 40px;
+  overflow: hidden;
+  border-top: 1px solid rgba(157, 52, 218, 0.1);
+}
+
+.dt-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 3. Logo & Brand (Perfectly Aligned & Stacked) */
+.dt-footer-logo-box {
+  display: flex;
+  align-items: center; /* Vertical centering of logo and text */
+  text-decoration: none;
+  gap: 15px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.dt-footer-logo-box:hover {
+  transform: translateY(-2px);
+}
+
+.dt-footer-img {
+  height: 80px; /* Sized to match two lines of text */
+  width: auto;
+  background-color: white;
+  border-radius: 20px;
+  /* Optional: filter: drop-shadow(0 0 8px rgba(157, 52, 218, 0.2)); */
+}
+
+.dt-logo-text-wrapper {
+  display: flex;
+  flex-direction: column; /* Stacks Datanyst and Technology */
+  justify-content: center;
+}
+
+.dt-footer-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dt-text-main);
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.dt-purple-text {
+  color: var(--dt-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.dt-footer-bio {
+  color: var(--dt-text-dim);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+
+/* 4. Social Icons (Animated) */
+.dt-social-group {
+  display: flex;
+  gap: 12px;
+}
+
+.dt-social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--dt-text-main);
+  text-decoration: none;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dt-social-icon:hover {
+  background: var(--dt-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(157, 52, 218, 0.4);
+  border-color: transparent;
+}
+
+/* Instagram Specific Hover Gradient */
+.dt-social-icon.dt-insta:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* 5. Navigation Links */
+.dt-footer-heading {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.dt-footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 30px;
+  height: 2px;
+  background: var(--dt-accent);
+}
+
+.dt-footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.dt-footer-list li {
+  margin-bottom: 12px;
+}
+
+.dt-footer-link {
+  color: var(--dt-text-dim);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.dt-footer-link:hover {
+  color: var(--dt-accent);
+  transform: translateX(5px);
+}
+
+/* 6. Contact & Animated Newsletter */
+.dt-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--dt-text-dim);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.dt-contact-row i {
+  color: var(--dt-accent);
+  width: 15px;
+}
+
+.dt-newsletter-box {
+  margin-top: 25px;
+}
+
+.dt-input-group {
+  display: flex;
+  background: var(--dt-input-bg);
+  padding: 6px;
+  border-radius: 50px; /* Pill shape */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.dt-input-group:focus-within {
+  border-color: var(--dt-accent);
+  box-shadow: 0 0 15px rgba(157, 52, 218, 0.2);
+}
+
+.dt-email-input {
+  background: transparent;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  flex: 1;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.dt-send-btn {
+  background: var(--dt-accent);
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.dt-send-btn:hover {
+  background: #b14cf0;
+  transform: scale(1.05);
+}
+
+.dt-send-btn i {
+  transition: transform 0.3s ease;
+}
+
+.dt-send-btn:hover i {
+  transform: translate(3px, -3px); /* Paper plane flight animation */
+}
+
+/* 7. Copyright Area */
+.dt-copyright-area {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.dt-copy-text {
+  color: var(--dt-text-dim);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* 8. Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .dt-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dt-main-footer {
+    padding: 60px 8% 30px;
+  }
+  
+  .dt-footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .dt-footer-logo-box,
+  .dt-social-group,
+  .dt-contact-row,
+  .dt-footer-heading::after {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dt-footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dt-footer-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dt-input-group {
+    border-radius: 12px;
+    flex-direction: column;
+    background: transparent;
+    gap: 12px;
+    border: none;
+    padding: 0;
+  }
+
+  .dt-email-input {
+    background: var(--dt-input-bg);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 45px;
+  }
+
+  .dt-send-btn {
+    justify-content: center;
+    border-radius: 10px;
+    height: 45px;
+  }
+}

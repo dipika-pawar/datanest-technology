@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datanest Technology </title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-wrapper">
+                <img src="Images/Datanest Technology.svg" alt="Logo" class="logo-img">
+                <span class="company-name">DATANEST <span class="accent">TECHNOLOGY</span></span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="career.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="btn-quote">Get Quote</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================
+     HERO SECTION 
+     ==============================-->
+    <section class="portfolio-hero">
+        <div class="hero-grid-overlay"></div>
+
+        <div class="portfolio-hero-container">
+            <div class="hero-text-content">
+                <h1 class="hero-main-title">Portfolio</h1>
+                <h2 class="hero-sub-title">Explore Our Work and <span class="gradient-accent">Successful Projects</span>
+                </h2>
+                <p class="hero-description">
+                    We deliver innovative and scalable technology solutions for businesses across various industries.
+                    Explore some of our recent projects and see how we help organizations grow with modern digital
+                    solutions.
+                </p>
+
+                <div class="hero-action-row">
+                    <a href="#contact" class="btn-outline-white">Let's Discuss Yours</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================
+ Projects Section 
+ ================================-->
+
+    <section class="project-section" id="projects">
+        <div class="project-container">
+            <div class="section-intro">
+                <h2 class="section-title">Our Featured <span class="purple-text">Projects</span></h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                    <button class="filter-btn" data-filter="cloud">AI & Cloud</button>
+                </div>
+            </div>
+
+            <div class="project-grid" id="project-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800"
+                            alt="E-commerce">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>React</span><span>Node.js</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Web Development</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured store with secure checkout and inventory management.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                            alt="CRM">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Java</span><span>Spring</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Enterprise Software</span>
+                        <h3>CRM Suite 2.0</h3>
+                        <p>Automated lead tracking and business intelligence for sales teams.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+                            alt="Mobile App">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Flutter</span><span>Firebase</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Mobile Application</span>
+                        <h3>Food Express App</h3>
+                        <p>Cross-platform mobile application with real-time GPS tracking.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">App Store</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cloud">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800"
+                            alt="Cloud">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>AWS</span><span>Docker</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">AI & Cloud</span>
+                        <h3>Secure Cloud Vault</h3>
+                        <p>Highly scalable storage solution with automated CI/CD pipelines.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cloud">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+                            alt="AI">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Python</span><span>OpenAI</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">AI & Cloud</span>
+                        <h3>IntelliBot AI</h3>
+                        <p>Advanced NLP-driven customer support bot with 24/7 automation.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Explore</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                            alt="FinTech">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Vue.js</span><span>D3.js</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Web Development</span>
+                        <h3>FinTrack Dashboard</h3>
+                        <p>Real-time stock market visualization and portfolio management tool.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800"
+                            alt="EdTech">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Next.js</span><span>GraphQL</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Web Development</span>
+                        <h3>EduLearn LMS</h3>
+                        <p>Scalable learning management system for schools and corporate training.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                            alt="Cybersecurity">
+                        <div class="project-overlay">
+                            <div class="tech-stack"><span>Go</span><span>Redis</span></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="category-tag">Enterprise Software</span>
+                        <h3>Sentinel Security</h3>
+                        <p>End-to-end encrypted file sharing for high-security organizations.</p>
+                        <div class="project-btns"><a href="#" class="btn-view">Live Demo</a><a href="#"
+                                class="btn-details">Details</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+ TECHNOLOGIES
+ ============================ -->
+
+    <section class="dn-border-universe">
+    <div id="dn-border-canvas"></div>
+
+    <div class="dn-border-wrapper">
+        <h2 class="dn-border-title">Technologies We Use</h2>
+
+        <div class="dn-border-grid">
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-code"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="dn-tech-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>Next.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Backend</h3>
+                    <div class="dn-tech-tags">
+                        <span>Java</span><span>Spring Boot</span><span>Node.js</span><span>Python</span><span>Go</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-database"></i></div>
+                    <h3>Database</h3>
+                    <div class="dn-tech-tags">
+                        <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Mobile</h3>
+                    <div class="dn-tech-tags">
+                        <span>React Native</span><span>Flutter</span><span>Swift</span><span>Kotlin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <h3>Cloud</h3>
+                    <div class="dn-tech-tags">
+                        <span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dn-border-card" data-tilt data-tilt-max="15">
+                <div class="dn-card-internal">
+                    <div class="dn-icon-glow"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>DevOps</h3>
+                    <div class="dn-tech-tags">
+                        <span>Jenkins</span><span>GitLab</span><span>Kubernetes</span><span>Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+
+    
+    <!--===========================
+     CTA
+     ============================= -->
+     <section class="dn-light-cta-area">
+    <div class="dn-light-cta-container" data-tilt data-tilt-max="5">
+        <div class="dn-light-accent"></div>
+
+        <div class="dn-light-cta-body">
+            <h2 class="dn-light-cta-heading">Have a Project in Mind?</h2>
+            <p class="dn-light-cta-text">
+                Let’s build something amazing together. Contact us today to discuss your project requirements.
+            </p>
+            
+            <div class="dn-light-cta-footer">
+                <a href="#contact" class="dn-light-btn">
+                    Start Your Project
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ==========================
+     FOOTER 
+    ==============================-->
+
+    <footer class="dt-main-footer">
+        <div class="dt-footer-grid">
+            <div class="dt-footer-brand">
+                <a href="#" class="dt-footer-logo-box">
+                    <img src="Images/Datanest Technology.svg" alt="Datanest Logo" class="dt-footer-img">
+
+                    <div class="dt-logo-text-wrapper">
+                        <span class="dt-footer-name">DATANEST</span>
+                        <span class="dt-purple-text">TECHNOLOGY</span>
+                    </div>
+                </a>
+                <p class="dt-footer-bio">
+                    Leading the digital transformation journey with precision and innovation. We turn complex data into
+                    actionable technology solutions.
+                </p>
+                <div class="dt-social-group">
+                    <a href="#" class="dt-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="dt-social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="dt-social-icon dt-insta" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="dt-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="dt-footer-nav">
+                <h4 class="dt-footer-heading">Quick Links</h4>
+                <ul class="dt-footer-list">
+                    <li><a href="#" class="dt-footer-link">Home</a></li>
+                    <li><a href="#" class="dt-footer-link">About Us</a></li>
+                    <li><a href="#" class="dt-footer-link">Portfolio</a></li>
+                    <li><a href="#" class="dt-footer-link">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="dt-footer-nav">
+                <h4 class="dt-footer-heading">Services</h4>
+                <ul class="dt-footer-list">
+                    <li><a href="#" class="dt-footer-link">Web Solutions</a></li>
+                    <li><a href="#" class="dt-footer-link">Cloud Integration</a></li>
+                    <li><a href="#" class="dt-footer-link">Data Science</a></li>
+                    <li><a href="#" class="dt-footer-link">Cyber Security</a></li>
+                </ul>
+            </div>
+
+            <div class="dt-footer-contact">
+                <h4 class="dt-footer-heading">Contact Details</h4>
+                <div class="dt-contact-row"><i class="fas fa-envelope"></i> hello@datanest.com</div>
+                <div class="dt-contact-row"><i class="fas fa-phone"></i> +1 (555) 000-1111</div>
+                <div class="dt-contact-row"><i class="fas fa-map-marker-alt"></i> Tech Plaza, Suite 404</div>
+
+                <div class="dt-newsletter-box">
+                    <form action="#" class="dt-input-group">
+                        <input type="email" class="dt-email-input" placeholder="Enter your email" required>
+                        <button type="submit" class="dt-send-btn">
+                            Send <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="dt-copyright-area">
+            <p class="dt-copy-text">&copy; 2026 Datanest Technology | All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
