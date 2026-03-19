@@ -1494,138 +1494,160 @@ HERO section
 /* ===================
 CTA 
 =========================*/
-:root {
-    --cta-navy: #0a1d37;
-    --cta-purple: #8e2de2;
-    --cta-indigo: #4a00e0;
-}
-
+/* CTA Section Styling - Light Theme */
 .final-cta {
-    background-color: #ffffff;
-    padding: 120px 20px;
     position: relative;
+    padding:40px 20px;
+    background: #ffffff; /* pure white background */
     overflow: hidden;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cta-container {
     max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
     position: relative;
-    z-index: 5;
-    text-align: center;
+    z-index: 2;
 }
 
-/* --- Content Styling --- */
+/* Modern Card with Subtle Shadow */
+.cta-content {
+    background: #e1d8f3; /* very slight purple hint on card or pure #ffffff */
+    border: 1px solid rgba(168, 85, 247, 0.08); /* faint border */
+    padding: 20px;
+    border-radius: 35px;
+    text-align: center;
+    /* Soft, multi-layered shadow for depth */
+    box-shadow: 0 4px 6px -1px rgba(168, 85, 247, 0.05), 
+                0 25px 50px -12px rgba(168, 85, 247, 0.1); 
+}
+
 .cta-heading {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 900;
-    color: var(--cta-navy);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: #1a1a2e; /* dark text for contrast */
     margin-bottom: 25px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
 
 .purple-text {
-    background: linear-gradient(45deg, var(--cta-purple), var(--cta-indigo));
+    /* Bright purple gradient */
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .cta-description {
-    font-size: 1.25rem;
-    color: #64748b;
-    line-height: 1.7;
-    margin-bottom: 45px;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease 0.2s forwards;
+    font-size: 1.15rem;
+    color: #334155; /* dark grey for readability */
+    line-height: 1.9;
+    margin-bottom: 20px;
 }
 
-/* --- The Big Action Button --- */
-.cta-btn-main {
+.cta-subtext {
+    font-size: 1.05rem;
+    color: #64748b; /* lighter grey for secondary text */
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Highlight Box - Light Theme */
+.cta-highlight-box {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    background: var(--cta-navy);
-    color: #ffffff;
-    padding: 20px 50px;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 30px rgba(10, 29, 55, 0.2);
-    opacity: 0;
-    animation: fadeInUp 0.8s ease 0.4s forwards;
+    padding: 18px 35px;
+    background: #faf5ff; /* very soft purple background */
+    border-radius: 60px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
 }
 
-.cta-btn-main:hover {
-    background: var(--cta-purple);
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(142, 45, 226, 0.4);
-}
-
-.cta-btn-main i {
-    transition: 0.4s;
-}
-
-.cta-btn-main:hover i {
-    transform: translate(5px, -5px) rotate(15deg);
-}
-
-.cta-footer-text {
-    margin-top: 30px;
-    color: #94a3b8;
-    font-size: 0.95rem;
-}
-
-.cta-footer-text a {
-    color: var(--cta-purple);
-    text-decoration: none;
+.cta-highlight {
     font-weight: 600;
+    color: #9333ea; /* distinct purple for highlight */
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
 }
 
-/* --- Decorative Shapes --- */
+.cta-highlight i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Background Soft Blobs - Light Theme */
 .cta-shapes .cta-circle {
     position: absolute;
     border-radius: 50%;
+    filter: blur(100px); /* slightly more blur for soft look */
     z-index: 1;
-    filter: blur(60px);
+    opacity: 0.25; /* much lower opacity on white bg */
 }
 
 .circle-1 {
-    width: 300px;
-    height: 300px;
-    background: rgba(142, 45, 226, 0.08);
-    top: -50px;
-    left: -100px;
-    animation: floatShape 8s infinite alternate;
+    width: 350px;
+    height: 350px;
+    background: #e0f2fe; /* very soft sky blue blob */
+    top: -80px;
+    left: -80px;
+    animation: float 12s infinite alternate;
 }
 
 .circle-2 {
-    width: 250px;
-    height: 250px;
-    background: rgba(74, 0, 224, 0.06);
-    bottom: -50px;
-    right: -50px;
-    animation: floatShape 10s infinite alternate-reverse;
+    width: 450px;
+    height: 450px;
+    background: #f3e8ff; /* very soft purple blob */
+    bottom: -100px;
+    right: -80px;
+    animation: float 15s infinite alternate-reverse;
 }
 
-/* --- Animations --- */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Subtle Floating Animation */
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(40px, 60px) rotate(5deg); }
 }
 
-@keyframes floatShape {
-    from { transform: translate(0, 0); }
-    to { transform: translate(40px, 40px); }
-}
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .final-cta {
+        padding: 70px 15px;
+    }
+    
+    .cta-content {
+        padding: 50px 25px;
+        border-radius: 25px;
+    }
 
-/* --- Responsive --- */
-@media (max-width: 600px) {
-    .cta-heading { font-size: 2rem; }
-    .cta-btn-main { width: 100%; justify-content: center; padding: 18px 30px; }
+    .cta-description {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .cta-subtext {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .cta-highlight-box {
+        padding: 15px 25px;
+        width: 100%; /* full width on mobile */
+        justify-content: center;
+    }
+
+    .cta-highlight {
+        font-size: 0.95rem;
+    }
+    
+    .circle-1, .circle-2 {
+        width: 200px;
+        height: 200px;
+        opacity: 0.2; /* even lower on mobile */
+    }
 }
 
 /*==========================
