@@ -87,6 +87,13 @@
   color: var(--primary-purple);
 }
 
+/* Active State Styling */
+.nav-link.active {
+    color: var(--primary-purple);
+    border-bottom: 2px solid var(--primary-purple);
+    padding-bottom: 5px; /* Adds space between text and underline */
+}
+
 /* Quote Button */
 .btn-quote {
   background-color: var(--primary-purple);
