@@ -235,8 +235,9 @@ HERO SECTION
 }
 
 .dt-hero-content {
-    opacity: 0;
-    transform: translateY(30px);
+    /* Layout fix for visible display */
+    opacity: 1; 
+    transform: translateY(0);
 }
 
 .dt-tagline {
@@ -261,6 +262,17 @@ HERO SECTION
     background: linear-gradient(90deg, #9d34da, #e0aaff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* --- Description Width Change --- */
+.dt-description {
+    color: var(--dt-text-dim);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.7;
+    margin-bottom: 50px;
+    max-width: 900px; /* Width vadhvali ahe (700px chi 900px keli) */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dt-hero-subheading {
@@ -853,11 +865,11 @@ HERO SECTION
 }
 
 .dt-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #94a3b8;
     margin-bottom: 40px;
-    max-width: 700px;
+    max-width: 812px;
     margin-left: auto;
     margin-right: auto;
 }
